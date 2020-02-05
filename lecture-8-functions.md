@@ -12,13 +12,15 @@
 
 ```js
 // Formula for area of rectangle
-
+length * width
 // Turn that into a more math-like function...
-
+f(l , w) = l * w
 // Define JavaScript function
-
+function areaRectangle(length, width) {
+    reeturn length * width;
+}
 // Call the JavaScript function
-
+areaRectangle(23, 10);
 
 ```
 
@@ -28,10 +30,13 @@
 
 ```js
 // Formula for area of circle
-
+Area = pi * radius * radius
 // Define JavaScript function
-
+function areaCircle(radius) {
+    return 3.14 * radius * radius;
+}
 // Call the JavaScript function
+areaCircle(10);
 
 ```
 
@@ -49,20 +54,25 @@
 
 ```js
 // Example
-
 ```
 
 ### Exercise 1
 
 ```js
 // Q1. Write a function that returns the sum of 3 numbers.
-
+function sum(num1, num2, num3) {
+    return num1 + num2 + num3;
+}
 
 // Q2. Write a function that returns the square of a number minus twice the number.
+function wut(num) {
+    return (num * num) - (num * 2);
+}
 
-
-// Q3. Write a function that returns the a person's full name, given their first and last names.
-
+// Q3. Write a function that returns a person's full name, given their first and last names.
+function name(firstName, lastName) {
+    return `${firstName}  ${lastName}`;
+}
 
 ```
 
@@ -72,13 +82,19 @@
 
 ```js
 // Q4. Write a function that returns the value of the tax for a given amount.
-
+function tax(price) {
+    return price * .15;
+}
 
 // Q5. Write a function that returns the value 42.
-
+function theAnswer() {
+    return 42;
+}
 
 // Q6. Write a function that returns "Hello!".
-
+function hi() {
+    return "Hello!";
+}
 
 ```
 

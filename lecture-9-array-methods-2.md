@@ -7,7 +7,7 @@
 
 ---
 
-- `.forEach()`
+- `.forEach()` 
 - `.map()`
 - `.filter()`
 - `every()`
@@ -22,9 +22,9 @@ The `.forEach()` method calls a function once for every element of the array.
 // Example
 const words = ['The', 'large', 'shaggy', 'dog', 'barked', 'at', 'the', 'silence'];
 
-words.forEach(function(word) {
-    // do something
-});
+words.forEach(function(word) { //creating function 
+    console.log(word); //code of the function
+}); //parenthesis of forEach closes here
 
 ```
 
@@ -72,7 +72,7 @@ It returns `true` or `false`.
 // Example
 const words = ['The', 'large', 'shaggy', 'dog', 'barked', 'at', 'the', 'silence'];
 
-words.filter(function(word) {
+words.every(function(word) {
     return word.length < 4;
 });
 

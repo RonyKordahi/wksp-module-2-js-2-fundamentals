@@ -14,9 +14,20 @@
 // filter([1, 2, 3, 4, 5], isEven) returns [2,4];
 
 function filter(lst, func) {
-    // lst is an array and f is a function
     // func takes one argument and returns a boolean (true or false)
 
+    let survivors = [];
+    let passOrFail;
+
+    for (let i = 0; i < lst.length; ++i) {
+        passOrFail = func(lst[i]);
+
+        if (passOrFail === true) {
+            survivors.push(lst[i]);
+        }
+    }
+
+    return survivors;
 }
 // -------------------------------------------------------------------------
 function keepLong(str) { return str.length > 5 }
