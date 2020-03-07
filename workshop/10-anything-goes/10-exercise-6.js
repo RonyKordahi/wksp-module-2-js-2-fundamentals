@@ -18,6 +18,27 @@
 
 function identifyArmstrongNumbers(num1, num2) {
 
+    let armstrongNumbers = [];
+    let currentNumber = [];
+    let temporary = "";
+    let sum = 0;
+    
+    for (let i = num1; i <= num2; ++i) {
+        temporary = i.toString();
+        currentNumber = temporary.split("");
+    
+        currentNumber.forEach(function(digit) {
+            sum += Math.pow(digit, currentNumber.length);
+        })
+    
+        if (sum === i) {
+            armstrongNumbers.push(i);
+        }
+    
+        sum = 0;
+    }
+
+    return armstrongNumbers;
 }
 
 console.log(identifyArmstrongNumbers(100, 99999));

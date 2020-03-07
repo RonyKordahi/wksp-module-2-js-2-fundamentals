@@ -11,7 +11,16 @@
 // characters there are in the string.
 
 function countBs(str) {
+    let counter = 0;
+    let letters = str.split("");
 
+    for (let i = 0; i < letters.length; ++i) {
+        if (letters[i] === "B") {
+            ++counter;
+        }
+    }
+
+    return counter;
 }
 // -------------------------------------------------------------------------
 console.log('Q1: ', countBs('BananaBabyBubbles'));

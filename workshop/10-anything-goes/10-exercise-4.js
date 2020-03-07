@@ -5,7 +5,25 @@
 // Hint: consider using .filter(), .indexOf() and .lastIndexOf()
 
 function filterNonUnique(array) {
+    let unique = [];
+    let counter = 0;
+    position = 0;
 
+    for (let i = 0; i < array.length; ++i) {
+
+        for (let j = 0; j < array.length; ++j) {
+            if (array[i] === array[j]) {
+                ++counter;
+            }
+        }
+        if (counter === 1) {
+            unique[position] = array[i];
+            ++position;
+        }
+        counter = 0;
+    }
+
+    return unique;
 }
 
 console.log(filterNonUnique([1,2,3,3,4,5,6,7,7,8]));

@@ -16,19 +16,19 @@ For example, all objects have `toString` and `valueOf` methods.
 
 ```js
 let num = 3;
-num.toString();
+num.toString(); // "3"
 
 let bool = true;
-bool.toString();
+bool.toString(); // "true"
 
 let str = 'hello';
-str.toString();
+str.toString(); // 'hello'
 
 let arr = [1, 2, 'three'];
-arr.toString();
+arr.toString(); // "1, 2, tree"
 
 let dip = {value: 3};
-dip.toString();
+dip.toString(); // [object Object] (doesn't have access to the data, cannot work)
 ```
 
 Let's look at the examples above again using `valueOf`.
@@ -81,6 +81,8 @@ It takes 2 parameters, the value to replace and the new value.
 ```js
 // Example
 const sentiment = 'I love programming';
+sentiment.replace("programming", "bacon");
+//output = "I love bacon"
 
 ```
 
@@ -95,6 +97,8 @@ const sentiment = 'I love programming';
 ```js
 // Example
 const sentiment = 'I love programming';
+sentiment.slice(2, 6);
+//output = "love"
 
 ```
 
@@ -108,6 +112,8 @@ The `.concat()` method is used to join two or more strings.
 // Example
 let partOne = 'Do or do not.';
 let partTwo = 'There is no try.';
+partOne.concat(partTwo);
+//mostly obsolete
 
 ```
 
@@ -120,6 +126,9 @@ The `.split()` method "split" a string into an array of _substrings_.
 ```js
 // Example
 const truth = 'The greatest teacher, failure is.';
+truth.split(" "); //erases the character specified
+//output is all words are separated, all spaces erased
+//turns the string into an array as an output
 
 ```
 
@@ -134,6 +143,9 @@ This method returns -1 if the value to search for never occurs.
 ```js
 // Example
 let yodaSpeak = "Fear is the path to the dark side. Fear leads to anger. Anger leads to hate. Hate leads to suffering.";
+yodaSpeak.indexOf(Anger);
+//output is 56, character position where the word starts
+//search is discriminitory to capitals
 
 ```
 
